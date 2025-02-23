@@ -4,9 +4,9 @@ Description
 
 The Cocktail Bar est une application mobile permettant de découvrir et rechercher des cocktails grâce à l'API TheCocktailDB.
 
-📥 Lien APK
+📥 Lien APK : https://estiam-my.sharepoint.com/:u:/p/mohamed-amine_dhaoui/EXe6cDYODpJHrhL_2ov-W5YBTNVauw7BA3T-YKpOxp8cCg?e=XGZwWX
 
-APK disponible ici
+APK disponible ici : https://estiam-my.sharepoint.com/:u:/p/mohamed-amine_dhaoui/EXe6cDYODpJHrhL_2ov-W5YBTNVauw7BA3T-YKpOxp8cCg?e=XGZwWX
 
 📱 Fonctionnalités
 
@@ -89,15 +89,14 @@ npm run test : Lance les tests
 
 npm run lint : Vérifie le code avec ESLint
 
-📥 Lien APK
+📥 Lien APK : https://estiam-my.sharepoint.com/:u:/p/mohamed-amine_dhaoui/EXe6cDYODpJHrhL_2ov-W5YBTNVauw7BA3T-YKpOxp8cCg?e=XGZwWX
 
-APK disponible ici
+APK disponible ici : https://estiam-my.sharepoint.com/:u:/p/mohamed-amine_dhaoui/EXe6cDYODpJHrhL_2ov-W5YBTNVauw7BA3T-YKpOxp8cCg?e=XGZwWX
 
 🙏 Remerciements
 
 TheCocktailDB pour leur API
 
-Tous les contributeurs du projet : Elyes BOUDABOUS, Yasmine AOUDJIT, Mohamed Amine DEHAOUI
+Tous les contributeurs du projet : Elyes BOUDABOUS, Yasmine AOUDJIT, Mohamed Amine DEHAOUI , Oussama CHAGHIL
 
 Notre cher prof : Yaaqoub SEMLALI
-
