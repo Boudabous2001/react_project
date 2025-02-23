@@ -1,5 +1,6 @@
 The Cocktail Bar - Application Mobile React Native 🍸
 Application mobile permettant de découvrir et rechercher des cocktails grâce à l'API TheCocktailDB.
+LIEN APK : https://estiam-my.sharepoint.com/:u:/p/mohamed-amine_dhaoui/EXe6cDYODpJHrhL_2ov-W5YBTNVauw7BA3T-YKpOxp8cCg?e=M2raeh
 
 📱 Fonctionnalités
 Recherche de cocktails par nom
@@ -47,7 +48,9 @@ npm run android : Lance l'application sur Android
 npm run ios : Lance l'application sur iOS
 npm run test : Lance les tests
 npm run lint : Vérifie le code avec ESLint
-🙏 Remerciements
+#APK
+Lien APK : https://estiam-my.sharepoint.com/:u:/p/mohamed-amine_dhaoui/EXe6cDYODpJHrhL_2ov-W5YBTNVauw7BA3T-YKpOxp8cCg?e=M2raeh
+#🙏 Remerciements
 TheCocktailDB pour leur API
 Tous les contributeurs du projet : Elyes BOUDABOUS, Yasmine AOUDJIT, Mohamed amine DEHAOUI.
 Notre cher prof : Yaaqoub SEMLALI.
