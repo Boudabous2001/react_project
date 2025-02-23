@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../../contexts/AuthContext'; // Importez useAuth
 import {
   StyleSheet,
   Text,
@@ -9,7 +9,8 @@ import {
   KeyboardAvoidingView,
   Platform,
   Image,
-  Pressable
+  Pressable,
+  Keyboard,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
@@ -20,31 +21,38 @@ export default function RegisterScreen() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
+  // Utilisez useAuth ici, à l'intérieur du composant fonctionnel
+  const { register } = useAuth();
+
   const handleRegister = async () => {
     try {
-      // Validations côté client
       if (!name || !email || !password) {
-        setError('Veuillez remplir tous les champs');
+        setError("Veuillez remplir tous les champs");
         return;
       }
   
       if (password.length < 4) {
-        setError('Le mot de passe doit contenir au moins 4 caractères');
+        setError("Le mot de passe doit contenir au moins 4 caractères");
         return;
       }
   
-      if (!email.includes('@')) {
-        setError('Veuillez entrer un email valide');
+      if (!email.includes("@")) {
+        setError("Veuillez entrer un email valide");
         return;
       }
   
-      // Tentative d'inscription
+      const passwordRegex = /^[a-zA-Z0-9]+$/;
+      if (!passwordRegex.test(password)) {
+        setError("Le mot de passe ne doit contenir que des lettres et des chiffres");
+        return;
+      }
+  
       await register(name, email, password);
-      alert('Inscription réussie ! Vous pouvez maintenant vous connecter.');
-      navigation.navigate('Login');
+      alert("Inscription réussie ! Vous pouvez maintenant vous connecter.");
+      navigation.navigate("Login");
     } catch (error) {
-      console.error('Erreur lors de l\'inscription:', error);
-      setError(error.message || 'Erreur lors de l\'inscription. Veuillez réessayer.');
+      console.error("Erreur lors de l'inscription:", error);
+      setError(error.message || "Erreur lors de l'inscription. Veuillez réessayer.");
     }
   };
 
@@ -53,7 +61,7 @@ export default function RegisterScreen() {
       style={styles.container}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
-      <Pressable 
+      <Pressable
         style={styles.inner}
         onPress={() => Keyboard.dismiss()}
       >
@@ -92,14 +100,14 @@ export default function RegisterScreen() {
 
         {error ? <Text style={styles.errorText}>{error}</Text> : null}
 
-        <TouchableOpacity 
+        <TouchableOpacity
           style={styles.registerButton}
           onPress={handleRegister}
         >
           <Text style={styles.registerButtonText}>S'inscrire</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity 
+        <TouchableOpacity
           style={styles.loginButton}
           onPress={() => navigation.goBack()}
         >
